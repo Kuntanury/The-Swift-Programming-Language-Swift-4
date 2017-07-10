@@ -40,7 +40,7 @@
   * [声明](ck/sm.md)
   * [属性](ck/sx.md)
   * [模式](ck/ms.md)
-  * [泛型参数](ck/fxcsh.md)
+  * [泛型参数](ck/fxcs.md)
   * [语法总结](ck/yfzj.md)
 * [版本历史](bbls.md)
 
