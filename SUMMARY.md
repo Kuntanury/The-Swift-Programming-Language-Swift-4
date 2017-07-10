@@ -42,7 +42,7 @@
   * [模式](yu-yan-can-kao/mo-shi.md)
   * [泛型参数](yu-yan-can-kao/fan-xing-can-shu.md)
   * [语法总结](yu-yan-can-kao/yu-fa-zong-jie.md)
-* [版本历史](li-shi.md)
+* [版本历史](ban-ben-li-shi.md)
 
 
 
