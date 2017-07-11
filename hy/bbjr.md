@@ -4,7 +4,7 @@
 
 > **备注**
 >
-> 当Swfit 4编译Swift 3代码时，会默认处理为3.2版本代码，这意味着你可以用`#if swift(>=3.2)`这种判断条件来让代码兼容多个版本的Swift编译器
+> 当Swfit 4编译Swift 3代码时，会默认处理为3.2版本代码，这表示你可以用`#if swift(>=3.2)`这种判断条件来让代码兼容多个版本的Swift编译器
 
 When you use Xcode 9 to build Swift 3 code, most of the new Swift 4 functionality is available. That said, the following features are available only to Swift 4 code:
 
