@@ -12,7 +12,7 @@
 >
 > 为了获得最佳体验，推荐用 Xcode 中的 Playground 来试验本章内容，由于本文内容可能会有变动，所以根据本文实现的软件应在最新的操作系统上完成测试。For the best experience, open this chapter as a playground in Xcode. Playgrounds allow you to edit the code listings and see the result immediately.
 >
-> 为了更好的阅读体验，我们推荐你使用 Xcode  里的 Playground 打开本章内容，Playground 允许你编辑代码并立即看到代码的运算结果。
+> 为了更好的阅读体验，我们推荐你使用 Xcode  里的 Playground 打开本章内容，Playground 允许你编辑代码并立即看到代码的运算结果。
 >
 > 下载本章的[Playground](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.playground.zip)（官网链接）
 

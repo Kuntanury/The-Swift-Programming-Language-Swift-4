@@ -1,7 +1,7 @@
 # Summary
 
 * [简介](README.md)
-* 欢迎
+* [欢迎](huan-ying.md)
   * [关于Swift](hy/gy.md)
   * [版本兼容](hy/bbjr.md)
   * [管中窥豹](hy/gzkb.md)
