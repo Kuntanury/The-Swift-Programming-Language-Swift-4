@@ -1,10 +1,6 @@
 # Summary
 
 * [简介](README.md)
-* [欢迎](huan-ying.md)
-  * [关于Swift](hy/gy.md)
-  * [版本兼容](hy/bbjr.md)
-  * [管中窥豹](hy/gzkb.md)
 * 入门
   * [语言基础](rm/yyjc.md)
   * [基本运算符](rm/jbysf.md)
@@ -31,6 +27,10 @@
   * [范型](rm/fx.md)
   * [访问控制](rm/fwkz.md)
   * [高级运算符](rm/gjysf.md)
+* [欢迎](huan-ying.md)
+  * [关于Swift](hy/gy.md)
+  * [版本兼容](hy/bbjr.md)
+  * [管中窥豹](hy/gzkb.md)
 * 参考
   * [关于参考](ck/gyck.md)
   * [词法结构](ck/cfjg.md)
