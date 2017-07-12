@@ -26,5 +26,13 @@ Use`let`to make a constant and`var`to make a variable. The value of a constant d
 2. `myVariable = 50 `
 3. `let myConstant = 42 `
 
-A constant or variable must have the same type as the value you want to assign to it. However, you don’t always have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that`myVariable`is an integer because its initial value is an integer.
+常量或变量的类型必须和赋值类型一样，然而，你却不需要写明类型，因为编译器可以根据你赋值的类型来推断他们类型。比如在上面的例子中， `myConstant` 初始化的值为整型数字，所以编译器推断 `myConstant` 的类型为整型。
+
+如果初始化值未能提供足够的推断信息（或者没有初始值），可以将明确的类型写在变量的后面，用冒号与变量隔开。
+
+1. `let implicitInteger = 70 `
+2. `let implicitDouble = 70.0 `
+3. `let explicitDouble: Double = 70 `
+
+If the initial value doesn’t provide enough information \(or if there is no initial value\), specify the type by writing it after the variable, separated by a colon.
 
