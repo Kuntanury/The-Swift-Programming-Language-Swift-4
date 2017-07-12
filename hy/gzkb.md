@@ -34,30 +34,36 @@
 
 > **小试身手**
 >
-> 创建一个显式类型为 **Float** 值为 **4** 的常量。
+> 创建一个显式类型为 **Float** 的值为 **4** 的常量。
 
 值永远不会隐式转换为其他类型。如果你需要把一个值转换成不同类型，可以用显式类型转换来取得目标类型。
 
-1. `let label = "The width is " `
-2. `let width = 94 `
-3. `let widthLabel = label + String(width) `
+1. `let label = "The width is "`
+2. `let width = 94`
+3. `let widthLabel = label + String(width)`
 
 > **小试身手**
 >
-> 尝试一下把最后一行的 String 类型转换去掉，编译器报什么错？
+> 尝试一下把最后一行的 String 类型转换去掉，看看编译器报什么错？
 
 有一个更为简单的方法来将值转化为字符串——将值放在前面带有反斜线的括号 `\()` 里，如下所示：
 
-1. `let apples = 3 `
-2. `let oranges = 5 `
-3. `let appleSummary = "I have \(apples) apples." `
-4. `let fruitSummary = "I have \(apples + oranges) pieces of fruit." `
+1. `let apples = 3`
+2. `let oranges = 5`
+3. `let appleSummary = "I have \(apples) apples."`
+4. `let fruitSummary = "I have \(apples + oranges) pieces of fruit."`
 
 > **小试身手**
 >
 > 在一句欢迎语中用 `\()` 来把一个浮点运算结果转化为字符串并和某人的名字拼接起来
 >
->  ~~`let greeting = "佳佳是一个 \(3.0 - 1.0)B." `~~
+> ~~`let greeting = "欢迎佳佳这个 \(3.0 - 1.0)货～"`~~
 
+用三个双引号来定义多行的字符串，每一行的
 
+Use three double quotes \(
+
+`"""`
+
+\) for strings that take up multiple lines. Indentation at the start of each quoted line is removed, as long as it matches the indentation of the closing quote. For example:
 
