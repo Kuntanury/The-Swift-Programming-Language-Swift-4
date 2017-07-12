@@ -18,5 +18,13 @@
 
 ---
 
+用 `let` 声明常量，用 `var` 声明变量。常量的值在编译时不需要初始化，但是你只能对它赋一次值。也就是说，你可以用常量来定义一个在很多地方用到的统一的值
 
+Use`let`to make a constant and`var`to make a variable. The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once. This means you can use constants to name a value that you determine once but use in many places.
+
+1. `var myVariable = 42 `
+2. `myVariable = 50 `
+3. `let myConstant = 42 `
+
+A constant or variable must have the same type as the value you want to assign to it. However, you don’t always have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that`myVariable`is an integer because its initial value is an integer.
 
