@@ -18,21 +18,46 @@
 
 ---
 
-用 `let` 声明常量，用 `var` 声明变量。常量的值在编译时不需要初始化，但是你只能对它赋一次值。也就是说，你可以用常量来定义一个在很多地方用到的统一的值
+用 `let` 声明常量，用 `var` 声明变量。常量在定义时不需要初始值，但是后续只能对它赋一次值。也就是说，你可以用常量来定义一个在很多地方用到的统一的值。
 
-Use`let`to make a constant and`var`to make a variable. The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once. This means you can use constants to name a value that you determine once but use in many places.
+1. `var myVariable = 42`
+2. `myVariable = 50`
+3. `let myConstant = 42`
 
-1. `var myVariable = 42 `
-2. `myVariable = 50 `
-3. `let myConstant = 42 `
+常量或变量的类型必须和赋值类型一样，然而，你却不需要写明类型，因为编译器可以根据你赋值的类型来推断他们类型：比如在上面的例子中， `myConstant` 初始化的值为整型数字，所以编译器推断 `myConstant` 的类型为整型。
 
-常量或变量的类型必须和赋值类型一样，然而，你却不需要写明类型，因为编译器可以根据你赋值的类型来推断他们类型。比如在上面的例子中， `myConstant` 初始化的值为整型数字，所以编译器推断 `myConstant` 的类型为整型。
+如果初始化值未能提供足够的推断信息（或者没有初始值），可以显式的将类型写在变量的后面，用冒号与变量隔开：
 
-如果初始化值未能提供足够的推断信息（或者没有初始值），可以将明确的类型写在变量的后面，用冒号与变量隔开。
+1. `let implicitInteger = 70`
+2. `let implicitDouble = 70.0`
+3. `let explicitDouble: Double = 70`
 
-1. `let implicitInteger = 70 `
-2. `let implicitDouble = 70.0 `
-3. `let explicitDouble: Double = 70 `
+> **小试身手**
+>
+> 创建一个显式类型为 **Float** 值为 **4** 的常量。
 
-If the initial value doesn’t provide enough information \(or if there is no initial value\), specify the type by writing it after the variable, separated by a colon.
+值永远不会隐式转换为其他类型。如果你需要把一个值转换成不同类型，可以用显式类型转换来取得目标类型。
+
+1. `let label = "The width is " `
+2. `let width = 94 `
+3. `let widthLabel = label + String(width) `
+
+> **小试身手**
+>
+> 尝试一下把最后一行的 String 类型转换去掉，编译器报什么错？
+
+有一个更为简单的方法来将值转化为字符串——将值放在前面带有反斜线的括号 `\()` 里，如下所示：
+
+1. `let apples = 3 `
+2. `let oranges = 5 `
+3. `let appleSummary = "I have \(apples) apples." `
+4. `let fruitSummary = "I have \(apples + oranges) pieces of fruit." `
+
+> **小试身手**
+>
+> 在一句欢迎语中用 `\()` 来把一个浮点运算结果转化为字符串并和某人的名字拼接起来
+>
+>  ~~`let greeting = "佳佳是一个 \(3.0 - 1.0)B." `~~
+
+
 
