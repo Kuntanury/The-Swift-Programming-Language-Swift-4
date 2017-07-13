@@ -59,11 +59,16 @@
 >
 > `let greeting = "欢迎佳佳这个 \(3.0 - 1.0)货～"`
 
-用三个双引号 `"""` 来定义多行的字符串，引号内的每一行都去掉了缩进，直到匹配到三个双引号，如下所示：
+用三双引号 `"""` 来定义多行的字符串，每行字符的缩进都和结束的三双引号的缩进相同，如下所示（官方文档此处举例可能有问题，括号内及注释为个人理解所加，如有偏差，敬请指教）：
 
-Use three double quotes \(
+1. `let quotation = """ `
+2. （空格\)`ven though there's whitespace to the left, //即使左边有空白字符`
+3. （空格\)`the actual lines aren't indented. //实际是不会包含在多行字符里面的`
+4. （空格\)（空格\)`Except for this line. //除了这行`
+5. （空格\)`Double quotes (") can appear without being escaped. //双引号可以不用转义`
+6. ` `
+7. （空格\)`I still have \(apples + oranges) pieces of fruit. //我还有几个苹果和橘子呢`
+8. （空格\)`""" `
 
-`"""`
 
-\) for strings that take up multiple lines. Indentation at the start of each quoted line is removed, as long as it matches the indentation of the closing quote. For example:
 
