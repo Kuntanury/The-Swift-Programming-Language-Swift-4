@@ -75,8 +75,8 @@
 1. `var shoppingList = ["catfish", "water", "tulips", "blue paint"]`
 2. `shoppingList[1] = "bottle of water"`
 3. `var occupations = [`
-4.         `"Malcolm": "Captain",`
-5.         `"Kaylee": "Mechanic",`
+4. `"Malcolm": "Captain",`
+5. `"Kaylee": "Mechanic",`
 6. `]`
 7. `occupations["Jayne"] = "Public Relations"`
 
@@ -96,5 +96,48 @@
 
 `if` 和 `switch` 用来做条件判断， and use `for - in` ， `while` 和 `repeat - while` 用来做循环。判断条件和循环变量的圆括号可以省略，但是语句体的大括号不能：
 
+1. `let individualScores = [75, 43, 103, 87, 12]`
+2. `var teamScore = 0`
+3. `for score in individualScores {`
+4. `    if score > 50 {`
+5. `        teamScore += 3`
+6. `    } else {`
+7. `        teamScore += 1`
+8. `    }`
+9. `}`
+10. `print(teamScore)`
 
+在 if 语句中，判断条件必须是一个返回布尔值的表达式——也就是说  `if score { ... }` 这类写法是错误的，因为编译器不会隐式地与零值做比较。
+
+你可以兼用 `if` 和 `let` 来处理赋值的变量可能为空的情况，这些赋值的变量表现为可选类型。可选类型或有确定值，或用 `nil` 来表示空值。在类型后添加 `?`  来表示变量为可选类型。
+
+1. `var optionalString: String? = "Hello"`
+2. `print(optionalString == nil)`
+3. 4. `var optionalName: String? = "John APPleseed"`
+5. `var greeting = "Hello!"`
+6. `if let name = optionalName {`
+7. `    greeting = "Hello, \(name)"`
+8. `}`
+
+> **小试身手**
+>
+> 把 optionalName 值改为 nil ， greeting输出什么？添加 else 分句：如果 optionalName 值为 nil 输出不同的greeting。
+
+
+
+> `let greeting = "欢迎佳佳这个 \(3.0 - 1.0)货～"`
+
+What greeting do you get? Add an
+
+`else`
+
+clause that sets a different greeting if
+
+`optionalName`
+
+is
+
+`nil`
+
+.
 
