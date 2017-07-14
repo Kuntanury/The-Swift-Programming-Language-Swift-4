@@ -18,7 +18,7 @@
 
 ---
 
-用 `let` 声明常量，用 `var` 声明变量。常量在定义时不需要初始值，但是后续只能对它赋一次值。也就是说，你可以用常量来定义一个在很多地方用到的统一的值。
+用 `let` 声明常量，用 `var` 声明变量。常量在定义时不需要初始值，但是后续只能对它赋一次值。也就是说，你可以用常量来定义一个在很多地方用到的统一的值：
 
 1. `var myVariable = 42`
 2. `myVariable = 50`
@@ -36,7 +36,7 @@
 >
 > 创建一个显式类型为 **Float** 的值为 **4** 的常量。
 
-值永远不会隐式转换为其他类型。如果你需要把一个值转换成不同类型，可以用显式类型转换来取得目标类型。
+值永远不会隐式转换为其他类型。如果你需要把一个值转换成不同类型，可以用显式类型转换来取得目标类型：
 
 1. `let label = "The width is "`
 2. `let width = 94`
@@ -61,14 +61,40 @@
 
 用三双引号 `"""` 来定义多行的字符串，每行字符的缩进都和结束的三双引号的缩进相同，如下所示（官方文档此处举例可能有问题，括号内及注释为个人理解所加，如有偏差，敬请指教）：
 
-1. `let quotation = """ `
-2. （空格\)`ven though there's whitespace to the left, //即使左边有空白字符`
+1. `let quotation = """`
+2. （空格\)`Even though there's whitespace to the left, //即使左边有空白字符`
 3. （空格\)`the actual lines aren't indented. //实际是不会包含在多行字符里面的`
 4. （空格\)（空格\)`Except for this line. //除了这行`
 5. （空格\)`Double quotes (") can appear without being escaped. //双引号可以不用转义`
 6. ` `
 7. （空格\)`I still have \(apples + oranges) pieces of fruit. //我还有几个苹果和橘子呢`
-8. （空格\)`""" `
+8. （空格\)`"""`
+
+用方括号 `[]` 创建数组和字典，而访问的时候则是通过用方括号中写索引值或者键值的方式。最后一个元素后多加个逗号无碍：
+
+1. `var shoppingList = ["catfish", "water", "tulips", "blue paint"]`
+2. `shoppingList[1] = "bottle of water"`
+3. `var occupations = [`
+4.         `"Malcolm": "Captain",`
+5.         `"Kaylee": "Mechanic",`
+6. `]`
+7. `occupations["Jayne"] = "Public Relations"`
+
+用初始化语法创建一个空的数组或字典：
+
+1. `let emptyArray = [String]()`
+2. `let emptyDictionary = [String: Float]()`
+
+如果元素类型可推导，你可以用 \[\] 初始化数组，用 \[:\] 初始化字典，就像你给变量赋值或者给函数传参数一样。
+
+1. `shoppingList = []`
+2. `occupations = [:]`
+
+### 控制流
+
+---
+
+`if` 和 `switch` 用来做条件判断， and use `for - in` ， `while` 和 `repeat - while` 用来做循环。判断条件和循环变量的圆括号可以省略，但是语句体的大括号不能：
 
 
 
