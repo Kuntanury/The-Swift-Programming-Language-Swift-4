@@ -32,9 +32,11 @@ let myConstant = 42
 
 如果初始化值未能提供足够的推断信息（或者没有初始值），可以显式的将类型写在变量的后面，用冒号与变量隔开：
 
-1. `let implicitInteger = 70`
-2. `let implicitDouble = 70.0`
-3. `let explicitDouble: Double = 70`
+```swift
+let implicitInteger = 70
+let implicitDouble = 70.0
+let explicitDouble: Double = 70
+```
 
 > **小试身手**
 >
@@ -175,6 +177,7 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 8. `for number in numbers {`
 
 9. `if number > largest {`
+
 10. `largest = number`
 11. `}`
 12. `}`
