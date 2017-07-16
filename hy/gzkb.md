@@ -96,7 +96,7 @@ let quotation = """
 ```swift
 var shoppingList = ["catfish", "water", "tulips", "blue paint"]
 shoppingList[1] = "bottle of water"
- 
+
 var occupations = [
     "Malcolm": "Captain",
     "Kaylee": "Mechanic",
@@ -106,13 +106,18 @@ occupations["Jayne"] = "Public Relations"
 
 用初始化语法创建一个空的数组或字典：
 
-1. `let emptyArray = [String]()`
-2. `let emptyDictionary = [String: Float]()`
+```swift
+let emptyArray = [String]()
+let emptyDictionary = [String: Float]()
+```
 
 如果元素类型可推导，你可以用 \[\] 初始化数组，用 \[:\] 初始化字典，就像你给变量赋值或者给函数传参数一样。
 
-1. `shoppingList = []`
-2. `occupations = [:]`
+```swift
+shoppingList = []
+occupations = [:]
+
+```
 
 ### 控制流程
 
