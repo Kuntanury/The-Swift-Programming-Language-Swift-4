@@ -116,7 +116,6 @@ let emptyDictionary = [String: Float]()
 ```swift
 shoppingList = []
 occupations = [:]
-
 ```
 
 ### 控制流程
@@ -125,16 +124,18 @@ occupations = [:]
 
 `if` 和 `switch` 用来做条件判断， and use `for - in` ， `while` 和 `repeat - while` 用来做循环。判断条件和循环变量的圆括号可以省略，但是语句体的大括号不能：
 
-1. `let individualScores = [75, 43, 103, 87, 12]`
-2. `var teamScore = 0`
-3. `for score in individualScores {`
-4. `if score > 50 {`
-5. `teamScore += 3`
-6. `} else {`
-7. `teamScore += 1`
-8. `}`
-9. `}`
-10. `print(teamScore)`
+```swift
+let individualScores = [75, 43, 103, 87, 12]
+var teamScore = 0
+for score in individualScores {
+    if score > 50 {
+        teamScore += 3
+    } else {
+        teamScore += 1
+    }
+}
+print(teamScore)
+```
 
 在 if 语句中，判断条件必须是一个返回布尔值的表达式——也就是说  `if score { ... }` 这类写法是错误的，因为编译器不会隐式地与零值做比较。
 
