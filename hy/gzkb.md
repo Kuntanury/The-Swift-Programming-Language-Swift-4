@@ -220,7 +220,7 @@ repeat {
 print(m)
 ```
 
-通过 ..&lt; 可以在循环中设定一个索引来约束循环范围：
+通过 ..&lt; 可以在循环中设定一个索引来约束范围：
 
 ```swift
 var total = 0
@@ -230,7 +230,7 @@ for i in 0..<4 {
 print(total)
 ```
 
-
+用 ..&lt; 约束的范围不包括上界的值，用 ... 可以设定同时包含上下界值的范围。
 
 Use`..<`to make a range that omits its upper value, and use`...`to make a range that includes both values.
 
