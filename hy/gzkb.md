@@ -113,11 +113,11 @@
 
 1. `var optionalString: String? = "Hello"`
 2. `print(optionalString == nil)`
-3. 4. `var optionalName: String? = "John APPleseed"`
-5. `var greeting = "Hello!"`
-6. `if let name = optionalName {`
-7. `    greeting = "Hello, \(name)"`
-8. `}`
+3. 1. `var optionalName: String? = "John APPleseed"`
+4. `var greeting = "Hello!"`
+5. `if let name = optionalName {`
+6. `greeting = "Hello, \(name)"`
+7. `}`
 
 > **小试身手**
 >
@@ -136,13 +136,13 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 1. `let vegetable = "red pepper"`
 2. `switch vegetable {`
 3. `case "celery":`
-4. `print("Add some raisins and make ants on a log.")`
+4. `    print("Add some raisins and make ants on a log.")`
 5. `case "cucumber", "watercress":`
-6. `print("That would make a good tea sandwich.")`
+6. `    print("That would make a good tea sandwich.")`
 7. `case let x where x.hasSuffix("pepper"):`
-8. `print("Is it a spicy\(x)?")`
+8. `    print("Is it a spicy\(x)?")`
 9. `default:`
-10. `print("Everything tastes good in soup.")`
+10. `    print("Everything tastes good in soup.")`
 11. `}`
 
 > **小试身手**
@@ -174,6 +174,7 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
    `],`
 
 5. `]`
+
 6. `var`
    `largest`
    `=`
