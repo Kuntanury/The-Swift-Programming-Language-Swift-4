@@ -56,10 +56,12 @@ let widthLabel = label + String(width)
 
 有一个更为简单的方法来将值转化为字符串——将值放在前面带有反斜线的括号 `\()` 里，如下所示：
 
-1. `let apples = 3`
-2. `let oranges = 5`
-3. `let appleSummary = "I have \(apples) apples."`
-4. `let fruitSummary = "I have \(apples + oranges) pieces of fruit."`
+```swift
+let apples = 3
+let oranges = 5
+let appleSummary = "I have \(apples) apples."
+let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+```
 
 > **小试身手**
 >
@@ -183,6 +185,7 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 10. `largest = number`
 
 11. `}`
+
 12. `}`
 13. `}`
 14. `print(largest)`
