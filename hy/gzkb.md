@@ -144,7 +144,7 @@ print(teamScore)
 ```swift
 var optionalString: String? = "Hello"
 print(optionalString == nil)
- 
+
 var optionalName: String? = "John Appleseed"
 var greeting = "Hello!"
 if let name = optionalName {
@@ -160,23 +160,27 @@ if let name = optionalName {
 
 另一个处理可选类型值的方式是用 ?? 来提供一个默认值，如果可选类型值为空，就使用默认值。
 
-1. `let nickName: String? = nil`
-2. `let fullName: String = "John Appleseed"`
-3. `let informalGreeting = "Hi \(nickName ?? fullName)"`
+```swift
+let nickName: String? = nil
+let fullName: String = "John Appleseed"
+let informalGreeting = "Hi \(nickName ?? fullName)"
+```
 
 Switch语句支持任意数据类型的各种比较操作——不拘泥于整数及等式检测：
 
-1. `let vegetable = "red pepper"`
-2. `switch vegetable {`
-3. `case "celery":`
-4. `print("Add some raisins and make ants on a log.")`
-5. `case "cucumber", "watercress":`
-6. `print("That would make a good tea sandwich.")`
-7. `case let x where x.hasSuffix("pepper"):`
-8. `print("Is it a spicy\(x)?")`
-9. `default:`
-10. `print("Everything tastes good in soup.")`
-11. `}`
+```swift
+let vegetable = "red pepper"
+switch vegetable {
+case "celery":
+    print("Add some raisins and make ants on a log.")
+case "cucumber", "watercress":
+    print("That would make a good tea sandwich.")
+case let x where x.hasSuffix("pepper"):
+    print("Is it a spicy \(x)?")
+default:
+    print("Everything tastes good in soup.")
+}
+```
 
 > **小试身手**
 >
