@@ -141,13 +141,16 @@ print(teamScore)
 
 你可以兼用 `if` 和 `let` 来处理赋值的变量可能为空的情况，这些赋值的变量表现为可选类型。可选类型或有确定值，或用 `nil` 来表示空值。在类型后添加 `?`  来表示变量为可选类型。
 
-1. `var optionalString: String? = "Hello"`
-2. `print(optionalString == nil)`
-3. 1. `var optionalName: String? = "John APPleseed"`
-4. `var greeting = "Hello!"`
-5. `if let name = optionalName {`
-6. `greeting = "Hello, \(name)"`
-7. `}`
+```swift
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+ 
+var optionalName: String? = "John Appleseed"
+var greeting = "Hello!"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+}
+```
 
 > **小试身手**
 >
