@@ -99,11 +99,11 @@
 1. `let individualScores = [75, 43, 103, 87, 12]`
 2. `var teamScore = 0`
 3. `for score in individualScores {`
-4. `    if score > 50 {`
-5. `        teamScore += 3`
-6. `    } else {`
-7. `        teamScore += 1`
-8. `    }`
+4. `if score > 50 {`
+5. `teamScore += 3`
+6. `} else {`
+7. `teamScore += 1`
+8. `}`
 9. `}`
 10. `print(teamScore)`
 
@@ -113,11 +113,11 @@
 
 1. `var optionalString: String? = "Hello"`
 2. `print(optionalString == nil)`
-3. 1. `var optionalName: String? = "John APPleseed"`
-4. `var greeting = "Hello!"`
-5. `if let name = optionalName {`
-6. `greeting = "Hello, \(name)"`
-7. `}`
+3. 4. `var optionalName: String? = "John APPleseed"`
+5. `var greeting = "Hello!"`
+6. `if let name = optionalName {`
+7. `    greeting = "Hello, \(name)"`
+8. `}`
 
 > **小试身手**
 >
@@ -160,18 +160,19 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 
 3. `"Fibonacci": [1, 1, 2, 3, 5, 8],`
 
-4. `"Square"`
-   `: [`
-   `1`
-   `,`
-   `4`
-   `,`
-   `9`
-   `,`
-   `16`
-   `,`
-   `25`
+4. `"Square"`  
+   `: [`  
+   `1`  
+   `,`  
+   `4`  
+   `,`  
+   `9`  
+   `,`  
+   `16`  
+   `,`  
+   `25`  
    `],`
+
 5. `]`
 6. `var`
    `largest`
