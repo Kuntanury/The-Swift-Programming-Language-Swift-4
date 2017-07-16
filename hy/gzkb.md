@@ -90,7 +90,7 @@
 1. `shoppingList = []`
 2. `occupations = [:]`
 
-### 控制流
+### 控制流程
 
 ---
 
@@ -99,7 +99,7 @@
 1. `let individualScores = [75, 43, 103, 87, 12]`
 2. `var teamScore = 0`
 3. `for score in individualScores {`
-4. `    if score > 50 {`
+4. `    if score > 50 {`
 5. `        teamScore += 3`
 6. `    } else {`
 7. `        teamScore += 1`
@@ -113,31 +113,165 @@
 
 1. `var optionalString: String? = "Hello"`
 2. `print(optionalString == nil)`
-3. 4. `var optionalName: String? = "John APPleseed"`
-5. `var greeting = "Hello!"`
-6. `if let name = optionalName {`
-7. `    greeting = "Hello, \(name)"`
-8. `}`
+3. 1. `var optionalName: String? = "John APPleseed"`
+4. `var greeting = "Hello!"`
+5. `if let name = optionalName {`
+6. `greeting = "Hello, \(name)"`
+7. `}`
 
 > **小试身手**
 >
-> 把 optionalName 值改为 nil ， greeting输出什么？添加 else 分句：如果 optionalName 值为 nil 输出不同的greeting。
+> 把 `optionalName` 值改为 `nil` ， greeting输出什么？添加 `else` 分句：如果 `optionalName` 值为 `nil` 输出不同的greeting。
 
+如果可选类型值为 nil ，由于判断条件为 false ，花括号中的代码就被跳过了。反之，可选类型的值就会被解包并赋给 let 声明的常量，这样，解包的值能够在花括号中可用了。
 
+另一个处理可选类型值的方式是用 ?? 来提供一个默认值，如果可选类型值为空，就使用默认值。
 
-> `let greeting = "欢迎佳佳这个 \(3.0 - 1.0)货～"`
+1. `let nickName: String? = nil`
+2. `let fullName: String = "John Appleseed"`
+3. `let informalGreeting = "Hi \(nickName ?? fullName)"`
 
-What greeting do you get? Add an
+Switch语句支持任意数据类型的各种比较操作——不拘泥于整数及等式检测：
 
-`else`
+1. `let vegetable = "red pepper"`
+2. `switch vegetable {`
+3. `case "celery":`
+4. `print("Add some raisins and make ants on a log.")`
+5. `case "cucumber", "watercress":`
+6. `print("That would make a good tea sandwich.")`
+7. `case let x where x.hasSuffix("pepper"):`
+8. `print("Is it a spicy\(x)?")`
+9. `default:`
+10. `print("Everything tastes good in soup.")`
+11. `}`
 
-clause that sets a different greeting if
+> **小试身手**
+>
+> 把 `default` 结果删掉，看看报什么错？
 
-`optionalName`
+留意一下上例中 `let` 的用法：通过将匹配式的值赋给常量的方式使得在判断分支中可以调用匹配式的值。
 
-is
+运行完 `switch` 语句中 `case` 匹配的代码后，程序就会结束整个选择。由于不在自动执行下一个判断，所以每个分支中的代码不需要加 `break` 来结束选择。
 
-`nil`
+你可以 for-in 遍历代表键值对的一对值的方式来遍历字典。字典是无序的，所以遍历也是无序的。
 
-.
+1. `let interestingNumbers = [`
+2. `"Prime": [2, 3, 5, 7, 11, 13],`
+
+3. `"Fibonacci": [1, 1, 2, 3, 5, 8],`
+
+4. `"Square"`
+   `: [`
+   `1`
+   `,`
+   `4`
+   `,`
+   `9`
+   `,`
+   `16`
+   `,`
+   `25`
+   `],`
+5. `]`
+6. `var`
+   `largest`
+   `=`
+   `0`
+7. `for`
+   `(`
+   `kind`
+   `,`
+   `numbers`
+   `)`
+   `in`
+   `interestingNumbers`
+   `{`
+8. `for`
+   `number`
+   `in`
+   `numbers`
+   `{`
+9. `if`
+   `number`
+   `>`
+   `largest`
+   `{`
+10. `largest`
+    `=`
+    `number`
+11. `}`
+12. `}`
+13. `}`
+14. `print`
+    `(`
+    `largest`
+    `)`
+
+EXPERIMENT
+
+Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
+
+Use`while`to repeat a block of code until a condition changes. The condition of a loop can be at the end instead, ensuring that the loop is run at least once.
+
+1. `var`
+   `n`
+   `=`
+   `2`
+2. `while`
+   `n`
+   `<`
+   `100`
+   `{`
+3. `n`
+   `*=`
+   `2`
+4. `}`
+5. `print`
+   `(`
+   `n`
+   `)`
+6. 
+7. `var`
+   `m`
+   `=`
+   `2`
+8. `repeat`
+   `{`
+9. `m`
+   `*=`
+   `2`
+10. `}`
+    `while`
+    `m`
+    `<`
+    `100`
+11. `print`
+    `(`
+    `m`
+    `)`
+
+You can keep an index in a loop by using`..<`to make a range of indexes.
+
+1. `var`
+   `total`
+   `=`
+   `0`
+2. `for`
+   `i`
+   `in`
+   `0`
+   `..`
+   `<`
+   `4`
+   `{`
+3. `total`
+   `+=`
+   `i`
+4. `}`
+5. `print`
+   `(`
+   `total`
+   `)`
+
+Use`..<`to make a range that omits its upper value, and use`...`to make a range that includes both values.
 
