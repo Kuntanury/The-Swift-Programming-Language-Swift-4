@@ -200,9 +200,25 @@ for (kind, numbers) in interestingNumbers {
 print(largest)
 ```
 
-EXPERIMENT
+> **小试身手**
+>
+> 添加另一个变量来记录最大值的类型，同时仍然记录这个最大值。
 
-Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
+用 while 设定一个条件来循环执行一段代码。如果把循环条件写在结尾，可以保证循环至少执行一次。
+
+```swift
+var n = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+ 
+var m = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+```
 
 Use`while`to repeat a block of code until a condition changes. The condition of a loop can be at the end instead, ensuring that the loop is run at least once.
 
