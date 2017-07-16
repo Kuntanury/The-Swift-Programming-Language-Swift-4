@@ -183,32 +183,22 @@ default:
 
 你可以 for-in 遍历代表键值对的一对值的方式来遍历字典。字典是无序的，所以遍历也是无序的。
 
-1. `let interestingNumbers = [`
-2. `"Prime": [2, 3, 5, 7, 11, 13],`
-
-3. `"Fibonacci": [1, 1, 2, 3, 5, 8],`
-
-4. `"Square": [1, 4, 9, 16, 25],`
-
-5. `]`
-
-6. `var largest = 0`
-
-7. `for (kind, numbers) in interestingNumbers {`
-
-8. `for number in numbers {`
-
-9. `if number > largest {`
-
-10. `largest = number`
-
-11. `}`
-
-12. `}`
-
-13. `}`
-
-14. `print(largest)`
+```swift
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+print(largest)
+```
 
 EXPERIMENT
 
