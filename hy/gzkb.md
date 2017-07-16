@@ -232,5 +232,7 @@ print(total)
 
 用 ..&lt; 约束的范围不包括上界的值，用 ... 可以设定同时包含上下界值的范围。
 
-Use`..<`to make a range that omits its upper value, and use`...`to make a range that includes both values.
+函数和闭包
+
+
 
