@@ -242,23 +242,23 @@ Use`func`to declare a function. Call a function by following its name with a lis
    `greet`
    `(`
    `person`
-   `: `
+   `:`
    `String`
-   `, `
+   `,`
    `day`
-   `: `
+   `:`
    `String`
    `) -`
    `>`
    `String`
-   ` {`
+   `{`
 2. `return`
    `"Hello`
-   ` \(`
+   `\(`
    `person`
    `)`
    `, today is`
-   ` \(`
+   `\(`
    `day`
    `)`
    `."`
@@ -266,15 +266,13 @@ Use`func`to declare a function. Call a function by following its name with a lis
 4. `greet`
    `(`
    `person`
-   `: `
+   `:`
    `"Bob"`
-   `, `
+   `,`
    `day`
-   `: `
+   `:`
    `"Tuesday"`
    `)`
-
-
 
 EXPERIMENT
 
@@ -287,24 +285,24 @@ By default, functions use their parameter names as labels for their arguments. W
    `(`
    `_`
    `person`
-   `: `
+   `:`
    `String`
-   `, `
+   `,`
    `on`
    `day`
-   `: `
+   `:`
    `String`
    `) -`
    `>`
    `String`
-   ` {`
+   `{`
 2. `return`
    `"Hello`
-   ` \(`
+   `\(`
    `person`
    `)`
    `, today is`
-   ` \(`
+   `\(`
    `day`
    `)`
    `."`
@@ -312,9 +310,9 @@ By default, functions use their parameter names as labels for their arguments. W
 4. `greet`
    `(`
    `"John"`
-   `, `
+   `,`
    `on`
-   `: `
+   `:`
    `"Wednesday"`
    `)`
 
@@ -328,91 +326,91 @@ Use a tuple to make a compound value—for example, to return multiple values fr
    `Int`
    `]) -`
    `>`
-   ` (`
+   `(`
    `min`
-   `: `
+   `:`
    `Int`
-   `, `
+   `,`
    `max`
-   `: `
+   `:`
    `Int`
-   `, `
+   `,`
    `sum`
-   `: `
+   `:`
    `Int`
    `) {`
 2. `var`
    `min`
-   ` = `
+   `=`
    `scores`
    `[`
    `0`
    `]`
 3. `var`
    `max`
-   ` = `
+   `=`
    `scores`
    `[`
    `0`
    `]`
 4. `var`
    `sum`
-   ` = `
+   `=`
    `0`
 5. 
 6. `for`
    `score`
    `in`
    `scores`
-   ` {`
+   `{`
 7. `if`
    `score`
    `>`
    `max`
-   ` {`
+   `{`
 8. `max`
-   ` = `
+   `=`
    `score`
-9. `} `
+9. `}`
    `else`
    `if`
    `score`
    `<`
    `min`
-   ` {`
+   `{`
 10. `min`
-    ` = `
+    `=`
     `score`
 11. `}`
 12. `sum`
-    ` += `
+    `+=`
     `score`
 13. `}`
 14. 
 15. `return`
-    ` (`
+    `(`
     `min`
-    `, `
+    `,`
     `max`
-    `, `
+    `,`
     `sum`
     `)`
 16. `}`
 17. `let`
     `statistics`
-    ` = `
+    `=`
     `calculateStatistics`
     `(`
     `scores`
     `: [`
     `5`
-    `, `
+    `,`
     `3`
-    `, `
+    `,`
     `100`
-    `, `
+    `,`
     `3`
-    `, `
+    `,`
     `9`
     `])`
 18. `print`
@@ -435,16 +433,16 @@ Functions can be nested. Nested functions have access to variables that were dec
    `() -`
    `>`
    `Int`
-   ` {`
+   `{`
 2. `var`
    `y`
-   ` = `
+   `=`
    `10`
 3. `func`
    `add`
    `() {`
 4. `y`
-   ` += `
+   `+=`
    `5`
 5. `}`
 6. `add`
@@ -461,7 +459,7 @@ Functions are a first-class type. This means that a function can return another 
    `makeIncrementer`
    `() -`
    `>`
-   ` ((`
+   `((`
    `Int`
    `) -`
    `>`
@@ -471,15 +469,15 @@ Functions are a first-class type. This means that a function can return another 
    `addOne`
    `(`
    `number`
-   `: `
+   `:`
    `Int`
    `) -`
    `>`
    `Int`
-   ` {`
+   `{`
 3. `return`
    `1`
-   ` + `
+   `+`
    `number`
 4. `}`
 5. `return`
@@ -487,7 +485,7 @@ Functions are a first-class type. This means that a function can return another 
 6. `}`
 7. `var`
    `increment`
-   ` = `
+   `=`
    `makeIncrementer`
    `()`
 8. `increment`
@@ -503,7 +501,7 @@ A function can take another function as one of its arguments.
    `list`
    `: [`
    `Int`
-   `], `
+   `],`
    `condition`
    `: (`
    `Int`
@@ -513,12 +511,12 @@ A function can take another function as one of its arguments.
    `) -`
    `>`
    `Bool`
-   ` {`
+   `{`
 2. `for`
    `item`
    `in`
    `list`
-   ` {`
+   `{`
 3. `if`
    `condition`
    `(`
@@ -535,12 +533,12 @@ A function can take another function as one of its arguments.
    `lessThanTen`
    `(`
    `number`
-   `: `
+   `:`
    `Int`
    `) -`
    `>`
    `Bool`
-   ` {`
+   `{`
 10. `return`
     `number`
     `<`
@@ -548,23 +546,23 @@ A function can take another function as one of its arguments.
 11. `}`
 12. `var`
     `numbers`
-    ` = [`
+    `= [`
     `20`
-    `, `
+    `,`
     `19`
-    `, `
+    `,`
     `7`
-    `, `
+    `,`
     `12`
     `]`
 13. `hasAnyMatches`
     `(`
     `list`
-    `: `
+    `:`
     `numbers`
-    `, `
+    `,`
     `condition`
-    `: `
+    `:`
     `lessThanTen`
     `)`
 
@@ -575,7 +573,7 @@ Functions are actually a special case of closures: blocks of code that can be ca
    `map`
    `({ (`
    `number`
-   `: `
+   `:`
    `Int`
    `) -`
    `>`
@@ -583,15 +581,13 @@ Functions are actually a special case of closures: blocks of code that can be ca
    `in`
 2. `let`
    `result`
-   ` = `
+   `=`
    `3`
-   ` * `
+   `*`
    `number`
 3. `return`
    `result`
 4. `})`
-
-
 
 EXPERIMENT
 
@@ -601,17 +597,17 @@ You have several options for writing closures more concisely. When a closure’s
 
 1. `let`
    `mappedNumbers`
-   ` = `
+   `=`
    `numbers`
    `.`
    `map`
-   `({ `
+   `({`
    `number`
    `in`
    `3`
-   ` * `
+   `*`
    `number`
-   ` })`
+   `})`
 2. `print`
    `(`
    `mappedNumbers`
@@ -621,22 +617,19 @@ You can refer to parameters by number instead of by name—this approach is espe
 
 1. `let`
    `sortedNumbers`
-   ` = `
+   `=`
    `numbers`
    `.`
    `sorted`
-   ` { `
+   `{`
    `$0`
    `>`
    `$1`
-   ` }`
+   `}`
 2. `print`
    `(`
    `sortedNumbers`
    `)`
 
-
-
-  
 
 
