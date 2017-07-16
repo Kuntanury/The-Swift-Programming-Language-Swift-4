@@ -82,24 +82,18 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 
 ```swift
 let quotation = """
-Even though there's whitespace to the left,
-the actual lines aren't indented.
-Except for this line.
-Double quotes (") can appear without being escaped.
- 
-I still have \(apples + oranges) pieces of fruit.
-"""
+（空格)Even though there's whitespace to the left,//即使左边有空白字符
+（空格)the actual lines aren't indented.//实际是不会包含在多行字符里面的
+（空格)（空格)Except for this line.//除了这行
+（空格)Double quotes (") can appear without being escaped.//双引号可以不用转义
+
+（空格)I still have \(apples + oranges) pieces of fruit.//我还有几个苹果和橘子呢
+（空格)"""
 ```
 
 用方括号 `[]` 创建数组和字典，而访问的时候则是通过用方括号中写索引值或者键值的方式。最后一个元素后多加个逗号无碍：
 
-1. `var shoppingList = ["catfish", "water", "tulips", "blue paint"]`
-2. `shoppingList[1] = "bottle of water"`
-3. `var occupations = [`
-4. `"Malcolm": "Captain",`
-5. `"Kaylee": "Mechanic",`
-6. `]`
-7. `occupations["Jayne"] = "Public Relations"`
+
 
 用初始化语法创建一个空的数组或字典：
 
@@ -200,6 +194,7 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 12. `}`
 
 13. `}`
+
 14. `print(largest)`
 
 EXPERIMENT
