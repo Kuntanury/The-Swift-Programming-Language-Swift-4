@@ -136,13 +136,13 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 1. `let vegetable = "red pepper"`
 2. `switch vegetable {`
 3. `case "celery":`
-4. `    print("Add some raisins and make ants on a log.")`
+4. `print("Add some raisins and make ants on a log.")`
 5. `case "cucumber", "watercress":`
-6. `    print("That would make a good tea sandwich.")`
+6. `print("That would make a good tea sandwich.")`
 7. `case let x where x.hasSuffix("pepper"):`
-8. `    print("Is it a spicy\(x)?")`
+8. `print("Is it a spicy\(x)?")`
 9. `default:`
-10. `    print("Everything tastes good in soup.")`
+10. `print("Everything tastes good in soup.")`
 11. `}`
 
 > **小试身手**
@@ -160,54 +160,20 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 
 3. `"Fibonacci": [1, 1, 2, 3, 5, 8],`
 
-4. `"Square"`  
-   `: [`  
-   `1`  
-   `,`  
-   `4`  
-   `,`  
-   `9`  
-   `,`  
-   `16`  
-   `,`  
-   `25`  
-   `],`
+4. `"Square": [1, 4, 9, 16, 25],`
 
 5. `]`
 
-6. `var`
-   `largest`
-   `=`
-   `0`
-7. `for`
-   `(`
-   `kind`
-   `,`
-   `numbers`
-   `)`
-   `in`
-   `interestingNumbers`
-   `{`
-8. `for`
-   `number`
-   `in`
-   `numbers`
-   `{`
-9. `if`
-   `number`
-   `>`
-   `largest`
-   `{`
-10. `largest`
-    `=`
-    `number`
-11. `}`
-12. `}`
+6. `var largest = 0`
+
+7. `for (kind, numbers) in interestingNumbers {`
+8. `    for number in numbers {`
+9. `        if number > largest {`
+10. `            largest = number`
+11. `        }`
+12. `    }`
 13. `}`
-14. `print`
-    `(`
-    `largest`
-    `)`
+14. `print(largest)`
 
 EXPERIMENT
 
