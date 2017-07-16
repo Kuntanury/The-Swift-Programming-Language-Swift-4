@@ -102,7 +102,7 @@ let emptyArray = [String]()
 let emptyDictionary = [String: Float]()
 ```
 
-如果元素类型可推导，你可以用 \[\] 初始化数组，用 \[:\] 初始化字典，就像你给变量赋值或者给函数传参数一样。
+如果元素类型可推导，你可以用 \[\] 初始化数组，用 \[:\] 初始化字典，就像你给变量赋值或者给函数传参数一样：
 
 ```swift
 shoppingList = []
@@ -130,7 +130,7 @@ print(teamScore)
 
 在 if 语句中，判断条件必须是一个返回布尔值的表达式——也就是说  `if score { ... }` 这类写法是错误的，因为编译器不会隐式地与零值做比较。
 
-你可以兼用 `if` 和 `let` 来处理赋值的变量可能为空的情况，这些赋值的变量表现为可选类型。可选类型或有确定值，或用 `nil` 来表示空值。在类型后添加 `?`  来表示变量为可选类型。
+你可以兼用 `if` 和 `let` 来处理赋值的变量可能为空的情况，这些赋值的变量表现为可选类型。可选类型或有确定值，或用 `nil` 来表示空值。在类型后添加 `?`  来表示变量为可选类型：
 
 ```swift
 var optionalString: String? = "Hello"
@@ -149,7 +149,7 @@ if let name = optionalName {
 
 如果可选类型值为 nil ，由于判断条件为 false ，花括号中的代码就被跳过了。反之，可选类型的值就会被解包并赋给 let 声明的常量，这样，解包的值能够在花括号中可用了。
 
-另一个处理可选类型值的方式是用 ?? 来提供一个默认值，如果可选类型值为空，就使用默认值。
+另一个处理可选类型值的方式是用 ?? 来提供一个默认值，如果可选类型值为空，就使用默认值：
 
 ```swift
 let nickName: String? = nil
@@ -181,7 +181,7 @@ default:
 
 运行完 `switch` 语句中 `case` 匹配的代码后，程序就会结束整个选择。由于不在自动执行下一个判断，所以每个分支中的代码不需要加 `break` 来结束选择。
 
-你可以 for-in 遍历代表键值对的一对值的方式来遍历字典。字典是无序的，所以遍历也是无序的。
+你可以 for-in 遍历代表键值对的一对值的方式来遍历字典。字典是无序的，所以遍历也是无序的：
 
 ```swift
 let interestingNumbers = [
@@ -204,7 +204,7 @@ print(largest)
 >
 > 添加另一个变量来记录最大值的类型，同时仍然记录这个最大值。
 
-用 `while` 设定一个条件来循环执行一段代码。如果把循环条件写在结尾，可以保证循环至少执行一次。
+用 `while` 设定一个条件来循环执行一段代码。如果把循环条件写在结尾，可以保证循环至少执行一次：
 
 ```swift
 var n = 2
@@ -220,67 +220,17 @@ repeat {
 print(m)
 ```
 
-Use`while`to repeat a block of code until a condition changes. The condition of a loop can be at the end instead, ensuring that the loop is run at least once.
+通过 ..&lt; 可以在循环中设定一个索引来约束循环范围：
 
-1. `var`
-   `n`
-   `=`
-   `2`
-2. `while`
-   `n`
-   `<`
-   `100`
-   `{`
-3. `n`
-   `*=`
-   `2`
-4. `}`
-5. `print`
-   `(`
-   `n`
-   `)`
-6. 
-7. `var`
-   `m`
-   `=`
-   `2`
-8. `repeat`
-   `{`
-9. `m`
-   `*=`
-   `2`
-10. `}`
-    `while`
-    `m`
-    `<`
-    `100`
-11. `print`
-    `(`
-    `m`
-    `)`
+```swift
+var total = 0
+for i in 0..<4 {
+    total += i
+}
+print(total)
+```
 
-You can keep an index in a loop by using`..<`to make a range of indexes.
 
-1. `var`
-   `total`
-   `=`
-   `0`
-2. `for`
-   `i`
-   `in`
-   `0`
-   `..`
-   `<`
-   `4`
-   `{`
-3. `total`
-   `+=`
-   `i`
-4. `}`
-5. `print`
-   `(`
-   `total`
-   `)`
 
 Use`..<`to make a range that omits its upper value, and use`...`to make a range that includes both values.
 
