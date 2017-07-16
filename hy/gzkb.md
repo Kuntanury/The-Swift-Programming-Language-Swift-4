@@ -44,9 +44,11 @@ let explicitDouble: Double = 70
 
 值永远不会隐式转换为其他类型。如果你需要把一个值转换成不同类型，可以用显式类型转换来取得目标类型：
 
-1. `let label = "The width is "`
-2. `let width = 94`
-3. `let widthLabel = label + String(width)`
+```swift
+let label = "The width is "
+let width = 94
+let widthLabel = label + String(width)
+```
 
 > **小试身手**
 >
@@ -179,6 +181,7 @@ Switch语句支持任意数据类型的各种比较操作——不拘泥于整�
 9. `if number > largest {`
 
 10. `largest = number`
+
 11. `}`
 12. `}`
 13. `}`
