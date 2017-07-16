@@ -232,7 +232,411 @@ print(total)
 
 用 ..&lt; 约束的范围不包括上界的值，用 ... 可以设定同时包含上下界值的范围。
 
-函数和闭包
+### 函数和闭包
 
+---
+
+Use`func`to declare a function. Call a function by following its name with a list of arguments in parentheses. Use`->`to separate the parameter names and types from the function’s return type.
+
+1. `func`
+   `greet`
+   `(`
+   `person`
+   `: `
+   `String`
+   `, `
+   `day`
+   `: `
+   `String`
+   `) -`
+   `>`
+   `String`
+   ` {`
+2. `return`
+   `"Hello`
+   ` \(`
+   `person`
+   `)`
+   `, today is`
+   ` \(`
+   `day`
+   `)`
+   `."`
+3. `}`
+4. `greet`
+   `(`
+   `person`
+   `: `
+   `"Bob"`
+   `, `
+   `day`
+   `: `
+   `"Tuesday"`
+   `)`
+
+
+
+EXPERIMENT
+
+Remove the`day`parameter. Add a parameter to include today’s lunch special in the greeting.
+
+By default, functions use their parameter names as labels for their arguments. Write a custom argument label before the parameter name, or write`_`to use no argument label.
+
+1. `func`
+   `greet`
+   `(`
+   `_`
+   `person`
+   `: `
+   `String`
+   `, `
+   `on`
+   `day`
+   `: `
+   `String`
+   `) -`
+   `>`
+   `String`
+   ` {`
+2. `return`
+   `"Hello`
+   ` \(`
+   `person`
+   `)`
+   `, today is`
+   ` \(`
+   `day`
+   `)`
+   `."`
+3. `}`
+4. `greet`
+   `(`
+   `"John"`
+   `, `
+   `on`
+   `: `
+   `"Wednesday"`
+   `)`
+
+Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.
+
+1. `func`
+   `calculateStatistics`
+   `(`
+   `scores`
+   `: [`
+   `Int`
+   `]) -`
+   `>`
+   ` (`
+   `min`
+   `: `
+   `Int`
+   `, `
+   `max`
+   `: `
+   `Int`
+   `, `
+   `sum`
+   `: `
+   `Int`
+   `) {`
+2. `var`
+   `min`
+   ` = `
+   `scores`
+   `[`
+   `0`
+   `]`
+3. `var`
+   `max`
+   ` = `
+   `scores`
+   `[`
+   `0`
+   `]`
+4. `var`
+   `sum`
+   ` = `
+   `0`
+5. 
+6. `for`
+   `score`
+   `in`
+   `scores`
+   ` {`
+7. `if`
+   `score`
+   `>`
+   `max`
+   ` {`
+8. `max`
+   ` = `
+   `score`
+9. `} `
+   `else`
+   `if`
+   `score`
+   `<`
+   `min`
+   ` {`
+10. `min`
+    ` = `
+    `score`
+11. `}`
+12. `sum`
+    ` += `
+    `score`
+13. `}`
+14. 
+15. `return`
+    ` (`
+    `min`
+    `, `
+    `max`
+    `, `
+    `sum`
+    `)`
+16. `}`
+17. `let`
+    `statistics`
+    ` = `
+    `calculateStatistics`
+    `(`
+    `scores`
+    `: [`
+    `5`
+    `, `
+    `3`
+    `, `
+    `100`
+    `, `
+    `3`
+    `, `
+    `9`
+    `])`
+18. `print`
+    `(`
+    `statistics`
+    `.`
+    `sum`
+    `)`
+19. `print`
+    `(`
+    `statistics`
+    `.`
+    `2`
+    `)`
+
+Functions can be nested. Nested functions have access to variables that were declared in the outer function. You can use nested functions to organize the code in a function that is long or complex.
+
+1. `func`
+   `returnFifteen`
+   `() -`
+   `>`
+   `Int`
+   ` {`
+2. `var`
+   `y`
+   ` = `
+   `10`
+3. `func`
+   `add`
+   `() {`
+4. `y`
+   ` += `
+   `5`
+5. `}`
+6. `add`
+   `()`
+7. `return`
+   `y`
+8. `}`
+9. `returnFifteen`
+   `()`
+
+Functions are a first-class type. This means that a function can return another function as its value.
+
+1. `func`
+   `makeIncrementer`
+   `() -`
+   `>`
+   ` ((`
+   `Int`
+   `) -`
+   `>`
+   `Int`
+   `) {`
+2. `func`
+   `addOne`
+   `(`
+   `number`
+   `: `
+   `Int`
+   `) -`
+   `>`
+   `Int`
+   ` {`
+3. `return`
+   `1`
+   ` + `
+   `number`
+4. `}`
+5. `return`
+   `addOne`
+6. `}`
+7. `var`
+   `increment`
+   ` = `
+   `makeIncrementer`
+   `()`
+8. `increment`
+   `(`
+   `7`
+   `)`
+
+A function can take another function as one of its arguments.
+
+1. `func`
+   `hasAnyMatches`
+   `(`
+   `list`
+   `: [`
+   `Int`
+   `], `
+   `condition`
+   `: (`
+   `Int`
+   `) -`
+   `>`
+   `Bool`
+   `) -`
+   `>`
+   `Bool`
+   ` {`
+2. `for`
+   `item`
+   `in`
+   `list`
+   ` {`
+3. `if`
+   `condition`
+   `(`
+   `item`
+   `) {`
+4. `return`
+   `true`
+5. `}`
+6. `}`
+7. `return`
+   `false`
+8. `}`
+9. `func`
+   `lessThanTen`
+   `(`
+   `number`
+   `: `
+   `Int`
+   `) -`
+   `>`
+   `Bool`
+   ` {`
+10. `return`
+    `number`
+    `<`
+    `10`
+11. `}`
+12. `var`
+    `numbers`
+    ` = [`
+    `20`
+    `, `
+    `19`
+    `, `
+    `7`
+    `, `
+    `12`
+    `]`
+13. `hasAnyMatches`
+    `(`
+    `list`
+    `: `
+    `numbers`
+    `, `
+    `condition`
+    `: `
+    `lessThanTen`
+    `)`
+
+Functions are actually a special case of closures: blocks of code that can be called later. The code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it is executed—you saw an example of this already with nested functions. You can write a closure without a name by surrounding code with braces \(`{}`\). Use`in`to separate the arguments and return type from the body.
+
+1. `numbers`
+   `.`
+   `map`
+   `({ (`
+   `number`
+   `: `
+   `Int`
+   `) -`
+   `>`
+   `Int`
+   `in`
+2. `let`
+   `result`
+   ` = `
+   `3`
+   ` * `
+   `number`
+3. `return`
+   `result`
+4. `})`
+
+
+
+EXPERIMENT
+
+Rewrite the closure to return zero for all odd numbers.
+
+You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
+
+1. `let`
+   `mappedNumbers`
+   ` = `
+   `numbers`
+   `.`
+   `map`
+   `({ `
+   `number`
+   `in`
+   `3`
+   ` * `
+   `number`
+   ` })`
+2. `print`
+   `(`
+   `mappedNumbers`
+   `)`
+
+You can refer to parameters by number instead of by name—this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses. When a closure is the only argument to a function, you can omit the parentheses entirely.
+
+1. `let`
+   `sortedNumbers`
+   ` = `
+   `numbers`
+   `.`
+   `sorted`
+   ` { `
+   `$0`
+   `>`
+   `$1`
+   ` }`
+2. `print`
+   `(`
+   `sortedNumbers`
+   `)`
+
+
+
+  
 
 
