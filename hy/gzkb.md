@@ -258,14 +258,14 @@ func greet(_ person: String, on day: String) -> String {
 greet("John", on: "Wednesday")
 ```
 
-用元组来创建复合值——例如，让函数来返回多个值。元组中的元素可以用名称或者数字来表示：
+用元组来创建复合值——例如，让函数来返回多个值。元组中的元素可以用名称或者索引来表示：
 
 ```swift
 func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
     var min = scores[0]
     var max = scores[0]
     var sum = 0
-    
+
     for score in scores {
         if score > max {
             max = score
@@ -274,7 +274,7 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
         }
         sum += score
     }
-    
+
     return (min, max, sum)
 }
 let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
