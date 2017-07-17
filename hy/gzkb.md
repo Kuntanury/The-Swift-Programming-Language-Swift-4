@@ -236,6 +236,15 @@ print(total)
 
 ---
 
+用 func 来声明一个函数，用函数名和括号内的参数来调用这个函数。用 `->` 分割参数名和函数返回类型：
+
+```swift
+func greet(person: String, day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet(person: "Bob", day: "Tuesday")
+```
+
 Use`func`to declare a function. Call a function by following its name with a list of arguments in parentheses. Use`->`to separate the parameter names and types from the function’s return type.
 
 1. `func`
