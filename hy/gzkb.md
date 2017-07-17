@@ -347,25 +347,7 @@ let mappedNumbers = numbers.map({ number in 3 * number })
 print(mappedNumbers)
 ```
 
-You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
 
-1. `let`
-   `mappedNumbers`
-   `=`
-   `numbers`
-   `.`
-   `map`
-   `({`
-   `number`
-   `in`
-   `3`
-   `*`
-   `number`
-   `})`
-2. `print`
-   `(`
-   `mappedNumbers`
-   `)`
 
 You can refer to parameters by number instead of by name—this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses. When a closure is the only argument to a function, you can omit the parentheses entirely.
 
