@@ -336,9 +336,16 @@ numbers.map({ (number: Int) -> Int in
 })
 ```
 
-EXPERIMENT
+> **小试身手**
+>
+> 重写闭包，让它对所有奇数返回0。
 
-Rewrite the closure to return zero for all odd numbers.
+有许多方式可以让闭包更简洁。当闭包类型已知的时候，比如代理的回调，可以忽略其参数、或者其返回值，甚至两样都忽略掉。单语句闭包隐式地返回执行结果。
+
+```swift
+let mappedNumbers = numbers.map({ number in 3 * number })
+print(mappedNumbers)
+```
 
 You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
 
