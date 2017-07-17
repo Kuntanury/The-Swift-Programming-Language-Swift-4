@@ -245,47 +245,11 @@ func greet(person: String, day: String) -> String {
 greet(person: "Bob", day: "Tuesday")
 ```
 
-Use`func`to declare a function. Call a function by following its name with a list of arguments in parentheses. Use`->`to separate the parameter names and types from the function’s return type.
+> **小试身手**
+>
+> 去掉 day 参数，在问候语中加上一个具体午餐的参数。
 
-1. `func`
-   `greet`
-   `(`
-   `person`
-   `:`
-   `String`
-   `,`
-   `day`
-   `:`
-   `String`
-   `) -`
-   `>`
-   `String`
-   `{`
-2. `return`
-   `"Hello`
-   `\(`
-   `person`
-   `)`
-   `, today is`
-   `\(`
-   `day`
-   `)`
-   `."`
-3. `}`
-4. `greet`
-   `(`
-   `person`
-   `:`
-   `"Bob"`
-   `,`
-   `day`
-   `:`
-   `"Tuesday"`
-   `)`
-
-EXPERIMENT
-
-Remove the`day`parameter. Add a parameter to include today’s lunch special in the greeting.
+一般情况下
 
 By default, functions use their parameter names as labels for their arguments. Write a custom argument label before the parameter name, or write`_`to use no argument label.
 
