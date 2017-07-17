@@ -327,30 +327,14 @@ var numbers = [20, 19, 7, 12]
 hasAnyMatches(list: numbers, condition: lessThanTen)
 ```
 
+函数实际上是一种特殊的闭包： 一段延后调用的代码。闭包中的代码可以存取在闭包内创建的变量和函数，即使闭包是在其他空间执行的——正如之前的嵌套函数一般。你可以将代码写在 \({}\) 中来创建一个匿名闭包，用 in 来分隔函数名和返回值：
 
-
-Functions are actually a special case of closures: blocks of code that can be called later. The code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it is executed—you saw an example of this already with nested functions. You can write a closure without a name by surrounding code with braces \(`{}`\). Use`in`to separate the arguments and return type from the body.
-
-1. `numbers`
-   `.`
-   `map`
-   `({ (`
-   `number`
-   `:`
-   `Int`
-   `) -`
-   `>`
-   `Int`
-   `in`
-2. `let`
-   `result`
-   `=`
-   `3`
-   `*`
-   `number`
-3. `return`
-   `result`
-4. `})`
+```swift
+numbers.map({ (number: Int) -> Int in
+    let result = 3 * number
+    return result
+})
+```
 
 EXPERIMENT
 
