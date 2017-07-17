@@ -296,32 +296,7 @@ func returnFifteen() -> Int {
 returnFifteen()
 ```
 
-Functions can be nested. Nested functions have access to variables that were declared in the outer function. You can use nested functions to organize the code in a function that is long or complex.
-
-1. `func`
-   `returnFifteen`
-   `() -`
-   `>`
-   `Int`
-   `{`
-2. `var`
-   `y`
-   `=`
-   `10`
-3. `func`
-   `add`
-   `() {`
-4. `y`
-   `+=`
-   `5`
-5. `}`
-6. `add`
-   `()`
-7. `return`
-   `y`
-8. `}`
-9. `returnFifteen`
-   `()`
+函数是第一类对象（First-class object：在计算机科学中指可以在执行期创造并作为参数传递给其他函数或存入一个变数的实体 - 摘自[维基百科](https://zh.wikipedia.org/wiki/%E7%AC%AC%E4%B8%80%E9%A1%9E%E7%89%A9%E4%BB%B6)）。就是说
 
 Functions are a first-class type. This means that a function can return another function as its value.
 
