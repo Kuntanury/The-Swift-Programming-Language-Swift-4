@@ -347,25 +347,16 @@ let mappedNumbers = numbers.map({ number in 3 * number })
 print(mappedNumbers)
 ```
 
+你可以通过参数位置而不是名字来引用参数——这种方式在很短的闭包中非常高效。当闭包作为函数最后一个参数时，它可以直接跟在圆括号后。而如果此时闭包又是函数的唯一参数，圆括号就可以省略掉了：
 
+```swift
+let sortedNumbers = numbers.sorted { $0 > $1 }
+print(sortedNumbers)
+```
 
-You can refer to parameters by number instead of by name—this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses. When a closure is the only argument to a function, you can omit the parentheses entirely.
+### 类与对象
 
-1. `let`
-   `sortedNumbers`
-   `=`
-   `numbers`
-   `.`
-   `sorted`
-   `{`
-   `$0`
-   `>`
-   `$1`
-   `}`
-2. `print`
-   `(`
-   `sortedNumbers`
-   `)`
+---
 
 
 
