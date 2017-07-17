@@ -258,43 +258,29 @@ func greet(_ person: String, on day: String) -> String {
 greet("John", on: "Wednesday")
 ```
 
-By default, functions use their parameter names as labels for their arguments. Write a custom argument label before the parameter name, or write`_`to use no argument label.
+用元组来创建复合值——例如，让函数来返回多个值。元组中的元素可以用名称或者数字来表示：
 
-1. `func`
-   `greet`
-   `(`
-   `_`
-   `person`
-   `:`
-   `String`
-   `,`
-   `on`
-   `day`
-   `:`
-   `String`
-   `) -`
-   `>`
-   `String`
-   `{`
-2. `return`
-   `"Hello`
-   `\(`
-   `person`
-   `)`
-   `, today is`
-   `\(`
-   `day`
-   `)`
-   `."`
-3. `}`
-4. `greet`
-   `(`
-   `"John"`
-   `,`
-   `on`
-   `:`
-   `"Wednesday"`
-   `)`
+```swift
+func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score > max {
+            max = score
+        } else if score < min {
+            min = score
+        }
+        sum += score
+    }
+    
+    return (min, max, sum)
+}
+let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+print(statistics.sum)
+print(statistics.2)
+```
 
 Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.
 
