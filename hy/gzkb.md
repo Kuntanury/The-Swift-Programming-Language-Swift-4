@@ -282,115 +282,19 @@ print(statistics.sum)
 print(statistics.2)
 ```
 
-Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.
+函数是可以嵌套的。嵌套函数可以访问声明在外层函数中的参数。可以通过嵌套函数来简化那些在一个函数中又长又复杂的代码。
 
-1. `func`
-   `calculateStatistics`
-   `(`
-   `scores`
-   `: [`
-   `Int`
-   `]) -`
-   `>`
-   `(`
-   `min`
-   `:`
-   `Int`
-   `,`
-   `max`
-   `:`
-   `Int`
-   `,`
-   `sum`
-   `:`
-   `Int`
-   `) {`
-2. `var`
-   `min`
-   `=`
-   `scores`
-   `[`
-   `0`
-   `]`
-3. `var`
-   `max`
-   `=`
-   `scores`
-   `[`
-   `0`
-   `]`
-4. `var`
-   `sum`
-   `=`
-   `0`
-5. 
-6. `for`
-   `score`
-   `in`
-   `scores`
-   `{`
-7. `if`
-   `score`
-   `>`
-   `max`
-   `{`
-8. `max`
-   `=`
-   `score`
-9. `}`
-   `else`
-   `if`
-   `score`
-   `<`
-   `min`
-   `{`
-10. `min`
-    `=`
-    `score`
-11. `}`
-12. `sum`
-    `+=`
-    `score`
-13. `}`
-14. 
-15. `return`
-    `(`
-    `min`
-    `,`
-    `max`
-    `,`
-    `sum`
-    `)`
-16. `}`
-17. `let`
-    `statistics`
-    `=`
-    `calculateStatistics`
-    `(`
-    `scores`
-    `: [`
-    `5`
-    `,`
-    `3`
-    `,`
-    `100`
-    `,`
-    `3`
-    `,`
-    `9`
-    `])`
-18. `print`
-    `(`
-    `statistics`
-    `.`
-    `sum`
-    `)`
-19. `print`
-    `(`
-    `statistics`
-    `.`
-    `2`
-    `)`
+```swift
+func returnFifteen() -> Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+```
 
 Functions can be nested. Nested functions have access to variables that were declared in the outer function. You can use nested functions to organize the code in a function that is long or complex.
 
