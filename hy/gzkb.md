@@ -249,7 +249,14 @@ greet(person: "Bob", day: "Tuesday")
 >
 > 去掉 day 参数，在问候语中加上一个具体午餐的参数。
 
-一般情况下
+一般情况下，函数用形参作为实参标签。实参标签也可以通过写在形参前的标签来自定义，或者用 `_` 来表示无实参标签：
+
+```swift
+func greet(_ person: String, on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet("John", on: "Wednesday")
+```
 
 By default, functions use their parameter names as labels for their arguments. Write a custom argument label before the parameter name, or write`_`to use no argument label.
 
