@@ -296,120 +296,38 @@ func returnFifteen() -> Int {
 returnFifteen()
 ```
 
-函数是第一类对象（First-class object：在计算机科学中指可以在执行期创造并作为参数传递给其他函数或存入一个变数的实体 - 摘自[维基百科](https://zh.wikipedia.org/wiki/%E7%AC%AC%E4%B8%80%E9%A1%9E%E7%89%A9%E4%BB%B6)）。就是说
+函数是第一类对象（First-class object：在计算机科学中指可以在执行期创造并作为参数传递给其他函数或存入一个变数的实体 - 摘自[维基百科](https://zh.wikipedia.org/wiki/第一類物件)）。就是说函数可以把另一个函数作为自己的返回值：
 
-Functions are a first-class type. This means that a function can return another function as its value.
+```swift
+func makeIncrementer() -> ((Int) -> Int) {
+    func addOne(number: Int) -> Int {
+        return 1 + number
+    }
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)
+```
 
-1. `func`
-   `makeIncrementer`
-   `() -`
-   `>`
-   `((`
-   `Int`
-   `) -`
-   `>`
-   `Int`
-   `) {`
-2. `func`
-   `addOne`
-   `(`
-   `number`
-   `:`
-   `Int`
-   `) -`
-   `>`
-   `Int`
-   `{`
-3. `return`
-   `1`
-   `+`
-   `number`
-4. `}`
-5. `return`
-   `addOne`
-6. `}`
-7. `var`
-   `increment`
-   `=`
-   `makeIncrementer`
-   `()`
-8. `increment`
-   `(`
-   `7`
-   `)`
+函数也可以把另一个函数作为自己的参数：
 
-A function can take another function as one of its arguments.
+```swift
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+var numbers = [20, 19, 7, 12]
+hasAnyMatches(list: numbers, condition: lessThanTen)
+```
 
-1. `func`
-   `hasAnyMatches`
-   `(`
-   `list`
-   `: [`
-   `Int`
-   `],`
-   `condition`
-   `: (`
-   `Int`
-   `) -`
-   `>`
-   `Bool`
-   `) -`
-   `>`
-   `Bool`
-   `{`
-2. `for`
-   `item`
-   `in`
-   `list`
-   `{`
-3. `if`
-   `condition`
-   `(`
-   `item`
-   `) {`
-4. `return`
-   `true`
-5. `}`
-6. `}`
-7. `return`
-   `false`
-8. `}`
-9. `func`
-   `lessThanTen`
-   `(`
-   `number`
-   `:`
-   `Int`
-   `) -`
-   `>`
-   `Bool`
-   `{`
-10. `return`
-    `number`
-    `<`
-    `10`
-11. `}`
-12. `var`
-    `numbers`
-    `= [`
-    `20`
-    `,`
-    `19`
-    `,`
-    `7`
-    `,`
-    `12`
-    `]`
-13. `hasAnyMatches`
-    `(`
-    `list`
-    `:`
-    `numbers`
-    `,`
-    `condition`
-    `:`
-    `lessThanTen`
-    `)`
+
 
 Functions are actually a special case of closures: blocks of code that can be called later. The code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it is executed—you saw an example of this already with nested functions. You can write a closure without a name by surrounding code with braces \(`{}`\). Use`in`to separate the arguments and return type from the body.
 
