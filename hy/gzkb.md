@@ -358,31 +358,40 @@ print(sortedNumbers)
 
 ---
 
+用 `class` + 类名来创建一个类。类中属性的声明写法和常量或者变量的声明写法是一样的，只是属性的作用域在类中。同理，类方法和函数的声明也是同样的写法：
+
+```swift
+class Shape {
+    var numberOfSides = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+```
+
 Use`class`followed by the class’s name to create a class. A property declaration in a class is written the same way as a constant or variable declaration, except that it is in the context of a class. Likewise, method and function declarations are written the same way.
 
 1. `class`
    `Shape`
-   ` {`
+   `{`
 2. `var`
    `numberOfSides`
-   ` = `
+   `=`
    `0`
 3. `func`
    `simpleDescription`
    `() -`
    `>`
    `String`
-   ` {`
+   `{`
 4. `return`
    `"A shape with`
-   ` \(`
+   `\(`
    `numberOfSides`
-   `) `
+   `)`
    `sides."`
 5. `}`
 6. `}`
-
-
 
 EXPERIMENT
 
@@ -392,17 +401,17 @@ Create an instance of a class by putting parentheses after the class name. Use d
 
 1. `var`
    `shape`
-   ` = `
+   `=`
    `Shape`
    `()`
 2. `shape`
    `.`
    `numberOfSides`
-   ` = `
+   `=`
    `7`
 3. `var`
    `shapeDescription`
-   ` = `
+   `=`
    `shape`
    `.`
    `simpleDescription`
@@ -412,28 +421,28 @@ This version of the`Shape`class is missing something important: an initializer t
 
 1. `class`
    `NamedShape`
-   ` {`
+   `{`
 2. `var`
    `numberOfSides`
-   `: `
+   `:`
    `Int`
-   ` = `
+   `=`
    `0`
 3. `var`
    `name`
-   `: `
+   `:`
    `String`
 4. 
 5. `init`
    `(`
    `name`
-   `: `
+   `:`
    `String`
    `) {`
 6. `self`
    `.`
    `name`
-   ` = `
+   `=`
    `name`
 7. `}`
 8. 
@@ -442,12 +451,12 @@ This version of the`Shape`class is missing something important: an initializer t
    `() -`
    `>`
    `String`
-   ` {`
+   `{`
 10. `return`
     `"A shape with`
-    ` \(`
+    `\(`
     `numberOfSides`
-    `) `
+    `)`
     `sides."`
 11. `}`
 12. `}`
@@ -462,39 +471,39 @@ Methods on a subclass that override the superclass’s implementation are marked
 
 1. `class`
    `Square`
-   `: `
+   `:`
    `NamedShape`
-   ` {`
+   `{`
 2. `var`
    `sideLength`
-   `: `
+   `:`
    `Double`
 3. 
 4. `init`
    `(`
    `sideLength`
-   `: `
+   `:`
    `Double`
-   `, `
+   `,`
    `name`
-   `: `
+   `:`
    `String`
    `) {`
 5. `self`
    `.`
    `sideLength`
-   ` = `
+   `=`
    `sideLength`
 6. `super`
    `.`
    `init`
    `(`
    `name`
-   `: `
+   `:`
    `name`
    `)`
 7. `numberOfSides`
-   ` = `
+   `=`
    `4`
 8. `}`
 9. 
@@ -503,10 +512,10 @@ Methods on a subclass that override the superclass’s implementation are marked
     `() -`
     `>`
     `Double`
-    ` {`
+    `{`
 11. `return`
     `sideLength`
-    ` * `
+    `*`
     `sideLength`
 12. `}`
 13. 
@@ -516,10 +525,10 @@ Methods on a subclass that override the superclass’s implementation are marked
     `() -`
     `>`
     `String`
-    ` {`
+    `{`
 15. `return`
     `"A square with sides of length`
-    ` \(`
+    `\(`
     `sideLength`
     `)`
     `."`
@@ -527,15 +536,15 @@ Methods on a subclass that override the superclass’s implementation are marked
 17. `}`
 18. `let`
     `test`
-    ` = `
+    `=`
     `Square`
     `(`
     `sideLength`
-    `: `
+    `:`
     `5.2`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `"my test square"`
     `)`
 19. `test`
@@ -547,8 +556,6 @@ Methods on a subclass that override the superclass’s implementation are marked
     `simpleDescription`
     `()`
 
-
-
 EXPERIMENT
 
 Make another subclass of`NamedShape`called`Circle`that takes a radius and a name as arguments to its initializer. Implement an`area()`and a`simpleDescription()`method on the`Circle`class.
@@ -557,62 +564,62 @@ In addition to simple properties that are stored, properties can have a getter a
 
 1. `class`
    `EquilateralTriangle`
-   `: `
+   `:`
    `NamedShape`
-   ` {`
+   `{`
 2. `var`
    `sideLength`
-   `: `
+   `:`
    `Double`
-   ` = `
+   `=`
    `0.0`
 3. 
 4. `init`
    `(`
    `sideLength`
-   `: `
+   `:`
    `Double`
-   `, `
+   `,`
    `name`
-   `: `
+   `:`
    `String`
    `) {`
 5. `self`
    `.`
    `sideLength`
-   ` = `
+   `=`
    `sideLength`
 6. `super`
    `.`
    `init`
    `(`
    `name`
-   `: `
+   `:`
    `name`
    `)`
 7. `numberOfSides`
-   ` = `
+   `=`
    `3`
 8. `}`
 9. 
 10. `var`
     `perimeter`
-    `: `
+    `:`
     `Double`
-    ` {`
+    `{`
 11. `get`
-    ` {`
+    `{`
 12. `return`
     `3.0`
-    ` * `
+    `*`
     `sideLength`
 13. `}`
 14. `set`
-    ` {`
+    `{`
 15. `sideLength`
-    ` = `
+    `=`
     `newValue`
-    ` / `
+    `/`
     `3.0`
 16. `}`
 17. `}`
@@ -623,10 +630,10 @@ In addition to simple properties that are stored, properties can have a getter a
     `() -`
     `>`
     `String`
-    ` {`
+    `{`
 20. `return`
     `"An equilateral triangle with sides of length`
-    ` \(`
+    `\(`
     `sideLength`
     `)`
     `."`
@@ -634,15 +641,15 @@ In addition to simple properties that are stored, properties can have a getter a
 22. `}`
 23. `var`
     `triangle`
-    ` = `
+    `=`
     `EquilateralTriangle`
     `(`
     `sideLength`
-    `: `
+    `:`
     `3.1`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `"a triangle"`
     `)`
 24. `print`
@@ -654,7 +661,7 @@ In addition to simple properties that are stored, properties can have a getter a
 25. `triangle`
     `.`
     `perimeter`
-    ` = `
+    `=`
     `9.9`
 26. `print`
     `(`
@@ -677,18 +684,18 @@ If you don’t need to compute the property but still need to provide code that 
 
 1. `class`
    `TriangleAndSquare`
-   ` {`
+   `{`
 2. `var`
    `triangle`
-   `: `
+   `:`
    `EquilateralTriangle`
-   ` {`
+   `{`
 3. `willSet`
-   ` {`
+   `{`
 4. `square`
    `.`
    `sideLength`
-   ` = `
+   `=`
    `newValue`
    `.`
    `sideLength`
@@ -696,15 +703,15 @@ If you don’t need to compute the property but still need to provide code that 
 6. `}`
 7. `var`
    `square`
-   `: `
+   `:`
    `Square`
-   ` {`
+   `{`
 8. `willSet`
-   ` {`
+   `{`
 9. `triangle`
    `.`
    `sideLength`
-   ` = `
+   `=`
    `newValue`
    `.`
    `sideLength`
@@ -713,50 +720,50 @@ If you don’t need to compute the property but still need to provide code that 
 12. `init`
     `(`
     `size`
-    `: `
+    `:`
     `Double`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `String`
     `) {`
 13. `square`
-    ` = `
+    `=`
     `Square`
     `(`
     `sideLength`
-    `: `
+    `:`
     `size`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `name`
     `)`
 14. `triangle`
-    ` = `
+    `=`
     `EquilateralTriangle`
     `(`
     `sideLength`
-    `: `
+    `:`
     `size`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `name`
     `)`
 15. `}`
 16. `}`
 17. `var`
     `triangleAndSquare`
-    ` = `
+    `=`
     `TriangleAndSquare`
     `(`
     `size`
-    `: `
+    `:`
     `10`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `"another test shape"`
     `)`
 18. `print`
@@ -778,15 +785,15 @@ If you don’t need to compute the property but still need to provide code that 
 20. `triangleAndSquare`
     `.`
     `square`
-    ` = `
+    `=`
     `Square`
     `(`
     `sideLength`
-    `: `
+    `:`
     `50`
-    `, `
+    `,`
     `name`
-    `: `
+    `:`
     `"larger square"`
     `)`
 21. `print`
@@ -802,28 +809,25 @@ When working with optional values, you can write`?`before operations like method
 
 1. `let`
    `optionalSquare`
-   `: `
+   `:`
    `Square`
-   `? = `
+   `? =`
    `Square`
    `(`
    `sideLength`
-   `: `
+   `:`
    `2.5`
-   `, `
+   `,`
    `name`
-   `: `
+   `:`
    `"optional square"`
    `)`
 2. `let`
    `sideLength`
-   ` = `
+   `=`
    `optionalSquare`
    `?.`
    `sideLength`
 
-
-
-  
 
 
