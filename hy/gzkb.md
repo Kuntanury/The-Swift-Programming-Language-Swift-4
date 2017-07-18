@@ -369,29 +369,9 @@ class Shape {
 }
 ```
 
-Use`class`followed by the class’s name to create a class. A property declaration in a class is written the same way as a constant or variable declaration, except that it is in the context of a class. Likewise, method and function declarations are written the same way.
-
-1. `class`
-   `Shape`
-   `{`
-2. `var`
-   `numberOfSides`
-   `=`
-   `0`
-3. `func`
-   `simpleDescription`
-   `() -`
-   `>`
-   `String`
-   `{`
-4. `return`
-   `"A shape with`
-   `\(`
-   `numberOfSides`
-   `)`
-   `sides."`
-5. `}`
-6. `}`
+> **小试身手**
+>
+> 用 let 添加一个类属性，添加一个带一个参数的类方法
 
 EXPERIMENT
 
