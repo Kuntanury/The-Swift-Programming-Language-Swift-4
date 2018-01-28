@@ -1,11 +1,7 @@
 # Summary
 
 * [简介](README.md)
-* 欢迎
-  * [关于Swift](hy/gy.md)
-  * [版本兼容](hy/bbjr.md)
-  * [管中窥豹](hy/gzkb.md)
-* 入门
+* [入门](ru-men.md)
   * [语言基础](rm/yyjc.md)
   * [基本运算符](rm/jbysf.md)
   * [字符与字符串](rm/zfyzfc.md)
@@ -43,6 +39,4 @@
   * [泛型参数](ck/fxcs.md)
   * [语法总结](ck/yfzj.md)
 * [版本历史](bbls.md)
-
-
 
